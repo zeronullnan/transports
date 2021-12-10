@@ -1,0 +1,43 @@
+{
+    "name": "writer-service",
+    "private": true,
+    "version": "0.1.0",
+    "description": "Writer service",
+    "author": "Konstantin Ogorodnikov <ogorodnikov.k@gmail.com>",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "types": "src/index.d.ts",
+    "scripts": {
+        "build": "node_modules/.bin/tsc",
+        "lint": "node_modules/.bin/tslint --project tsconfig.json",
+        "test": "node_modules/.bin/mocha",
+        "start": "node ./bin/run"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "socket.io-client": "^2.3.0",
+        "ts-nats": "1.2.4"
+    },
+    "devDependencies": {
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.12.21",
+        "@types/socket.io-client": "^1.4.32",
+        "mocha": "^6.2.2",
+        "should": "^13.2.3",
+        "ts-node": "^8.5.4",
+        "tslint": "^5.20.1",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.7.4"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "mocha": {
+        "extension": [
+            "ts"
+        ],
+        "spec": "src/**/*.spec.ts",
+        "require": "ts-node/register",
+        "exit": true
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "tests",
+    "private": true,
+    "version": "0.1.0",
+    "description": "Integration tests for reader and writer services",
+    "author": "Konstantin Ogorodnikov <ogorodnikov.k@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "test": "node_modules/.bin/mocha --exit **/*.test.js"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "fs-extra": "^8.1.0",
+        "mocha": "^6.2.2",
+        "should": "^13.2.3"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    }
+}

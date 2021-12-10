@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+// tslint:disable: no-var-requires
+require('ts-node/register');
+const { Service } = require('../src/index');
+// tslint:enable: no-var-requires
+
+const service = new Service({ listenStopSignals: true });
+
+service.start({ catchStopSignals: true })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    });
